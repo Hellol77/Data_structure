@@ -35,9 +35,7 @@ def get_token_list(expr):
                 token_list.append(listexpr[0])
                 del listexpr[0]
             else:
-                for i in range(1,len(listexpr)):
-                    
-                           
+                for i in range(1,len(listexpr)):     
                     if listexpr[i] in '+*-/^()':
                         token_list.append(''.join(listexpr[0:i]))
                         del listexpr[0:i]
@@ -59,8 +57,7 @@ def infix_to_postfix(token_list):
     prec['*']=2
     prec['/']=2
     prec['^']=3
-	
-	
+
     for i in token_list:
         if i not in '+-*/^()':#연산자 피연산자 판별
             outstack.append(i)
@@ -124,8 +121,6 @@ def compute_postfix(token_list):
             resultstack.push(previous_num**next_num)
     return resultstack.pop()
 			
-			
-
 expr = input()
 value = compute_postfix(infix_to_postfix(get_token_list(expr)))
 print(value)
