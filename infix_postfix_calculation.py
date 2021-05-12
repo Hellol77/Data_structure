@@ -125,9 +125,7 @@ def compute_postfix(token_list):
     return resultstack.pop()
 			
 			
-	
-	
-# 아래 세 줄은 수정하지 말 것!
+
 expr = input()
 value = compute_postfix(infix_to_postfix(get_token_list(expr)))
 print(value)
