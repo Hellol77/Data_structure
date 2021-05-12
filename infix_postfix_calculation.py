@@ -22,7 +22,7 @@ class Stack:
     def isEmpty(self):
         return self.__len__() == 0
 
-def get_token_list(expr):
+def get_token_list(expr):#expr 문자열을 피연산자와 연산자로 나눈 후 리스트에 담는 함수
     token_list=[]
     expr=expr.replace(' ','')# 공백 없애기
     listexpr=list(expr)
@@ -46,7 +46,7 @@ def get_token_list(expr):
                         break
     return token_list
                         
-def infix_to_postfix(token_list):
+def infix_to_postfix(token_list):#infix인 수식을 postfix로 바꾸는 함수
     outstack=[]
     opstack=Stack()
     #연산자 우선순위 설정
@@ -94,7 +94,7 @@ def infix_to_postfix(token_list):
         except ValueError:
             break
     return outstack
-def compute_postfix(token_list):
+def compute_postfix(token_list):#postfix수식을 계산하는 함수
     resultstack=Stack()
     for i in token_list:
         if i not in '+-*/^':
