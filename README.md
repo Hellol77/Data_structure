@@ -27,6 +27,7 @@
   * findMax :  최대값을 갖는 노드의 key값을 리턴
   * deleteMax : 최대값을 갖는 노드를 제거
   * insert(k,key) : head노드 부터 k번째 다음 노드에 key를 가지는 새로운 노드를 삽입 (k는 양수)
+  * [관련내용](https://hellol77.tistory.com/3)
 ### doublyLinkedList.py
 
 ### hashFunction.py
