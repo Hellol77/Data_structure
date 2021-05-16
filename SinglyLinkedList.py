@@ -15,7 +15,7 @@ class SinglyLinkedList:
 	def __len__(self):
 		return self.size
 
-	def printList(self):  # 변경없이 사용할 것!
+	def printList(self):  
 		v = self.head
 		while(v):
 			print(v.key, "->", end=" ")
@@ -76,7 +76,7 @@ class SinglyLinkedList:
 		return v
 	def remove(self, x):
 		# 노드 x를 제거한 후 True리턴. 제거 실패면 False 리턴
-		# x는 key 값이 아니라 노드임에 유의!
+		
 		if x==None or self.size ==0:
 			return False
 		elif x==self.head:
@@ -163,7 +163,7 @@ class SinglyLinkedList:
 			return
 	def size(self):
 		return self.size
-# 아래 코드는 수정하지 마세요!
+
 L = SinglyLinkedList()
 while True:
 	cmd = input().split()
