@@ -18,7 +18,7 @@
 
   * 한방향 연결리스트 구현
   * pushFront(key) : key값을 갖는 노드를 가장 앞에 삽입
-  * pushBack : key값을 갖는 노드를 가장 뒤에 삽입
+  * pushBack(key) : key값을 갖는 노드를 가장 뒤에 삽입
   * popFront : 한방향 연결리스트의 첫 노드를 삭제한 후 그 key값을 리턴
   * popBack : 한방향 연결리스트의 마지막 노드를 삭제한 후 그 key값을 리턴
   * search(key) : 한방향 연결리스트에서 key값을 갖는 노드를 찾아 리턴 
@@ -29,7 +29,19 @@
   * insert(k,key) : head노드 부터 k번째 다음 노드에 key를 가지는 새로운 노드를 삽입 (k는 양수)
   * [관련내용](https://hellol77.tistory.com/3)
 ### doublyLinkedList.py
-
+  * 양방향 연결리스트 구현
+  * pushFront(key) : key값을 갖는 노드를 가장 앞에 삽입
+  * pushBack(key) : key값을 갖는 노드를 가장 뒤에 삽입
+  * popFront : 양방향 연결리스트의 첫 노드를 삭제한 후 그 key값을 리턴
+  * popBack : 양방향 연결리스트의 마지막 노드를 삭제한 후 그 key값을 리턴
+  * search(key) : 양방향 연결리스트에서 key값을 갖는 노드를 찾아 리턴
+  * deleteNode(x) : 노트 x를 제거 (search랑 같이 사용)
+  * deleteMax : 가장 큰 key를 가진 노드를 삭제하고 그 key값을 리턴, 빈 리스트라면 None 리턴
+  * findMax : 가장 큰 key값을 리턴, 빈 리스트라면 None 리턴
+  * sort : 오름차순으로 정렬한 후 양방향 연결리스트를 리턴
+  * insertBefore(x,key) : 노드 x 이전에 key값을 가진 노드 삽입
+  * insertAfter(x,key) : 노트 x 이후에 key값을 가진 노드 삽입
+  
 ### hashFunction.py
 
 ### carrotMarket.py
