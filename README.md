@@ -49,7 +49,6 @@
   *  search(key) : key가 존재할 경우 key값 리턴, 없으면 None 리턴
   *  hash_function(key) : key%size
   *  set(key,value=none) : key가 테이블에 존재하면 value를 업데이트, key가 테이블에 존재하지 않는다면, key와 value 삽입, 테이블이 다 찼다면 None 리턴, 아니면 key값 리턴
-  *  
 ### carrotMarket.py
 
 ### minHeap
