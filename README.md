@@ -43,7 +43,13 @@
   * insertAfter(x,key) : 노트 x 이후에 key값을 가진 노드 삽입
   
 ### hashFunction.py
-
+  key와 value 를 저장하는 해쉬테이블
+  *  find_slot(key) : key가 존재할 경우 해당 슬롯 번호를 리턴, 없다면 삽일될 슬롯 번호를 리턴
+  *  remove(key) : key가 존재할 경우 지우고 key값 리턴, 없으면 None 리턴
+  *  search(key) : key가 존재할 경우 key값 리턴, 없으면 None 리턴
+  *  hash_function(key) : key%size
+  *  set(key,value=none) : key가 테이블에 존재하면 value를 업데이트, key가 테이블에 존재하지 않는다면, key와 value 삽입, 테이블이 다 찼다면 None 리턴, 아니면 key값 리턴
+  *  
 ### carrotMarket.py
 
 ### minHeap
