@@ -43,14 +43,14 @@
   * insertAfter(x,key) : 노트 x 이후에 key값을 가진 노드 삽입
   
 ### hashFunction.py
-  key와 value 를 저장하는 해쉬테이블
+* key와 value 를 저장하는 해쉬테이블
   *  find_slot(key) : key가 존재할 경우 해당 슬롯 번호를 리턴, 없다면 삽일될 슬롯 번호를 리턴
   *  remove(key) : key가 존재할 경우 지우고 key값 리턴, 없으면 None 리턴
   *  search(key) : key가 존재할 경우 key값 리턴, 없으면 None 리턴
   *  hash_function(key) : key%size
   *  set(key,value=none) : key가 테이블에 존재하면 value를 업데이트, key가 테이블에 존재하지 않는다면, key와 value 삽입, 테이블이 다 찼다면 None 리턴, 아니면 key값 리턴
 ### carrotMarket.py
-  해쉬 테이블을 이용한 코드
+* 해쉬 테이블을 이용한 코드
   1. 두 줄의 숫자들을 입력한다. 중복이 가능하다.(예 : 1 2 4 5 7 8 2 2)
   2. 첫번째 출력은 중복된 숫자들을 출력한다. 중복되면 중복된 횟수만큼 그 숫자를 출력한다.
   3. 두번째 출력은 첫번째 출력과 다르게 중복된 횟수만큼 출력되지 않고 중복되면 단 한번만 출력한다.
