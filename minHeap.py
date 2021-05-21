@@ -16,7 +16,7 @@ class AdaptedHeap: # min_heap으로 정의함!
 		self.heapify_up(len(self.A)-1)
 		return self.D[key]
 
-	def heapify_up(self, k):
+		def heapify_up(self, k):
 		# code here: key 값의 index가 변경되면 그에 따라 D 변경 필요
 		p=(k-1)//2
 		if p>=0 and self.A[p]>self.A[k]:
@@ -79,7 +79,7 @@ class AdaptedHeap: # min_heap으로 정의함!
 		else:
 			return None
 
-# 아래 명령 처리 부분은 수정하지 말 것!
+
 H = AdaptedHeap()
 while True:
 	cmd = input().split()
