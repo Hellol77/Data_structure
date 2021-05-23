@@ -56,3 +56,10 @@
   3. 두번째 출력은 첫번째 출력과 다르게 중복된 횟수만큼 출력되지 않고 중복되면 단 한번만 출력한다.
 
 ### minHeap
+*  최솟값이 root 노드인 트리
+  *  insert(key) : 트리안에 key값을 삽입
+  *  heapify_up(key) : 입력된 key값을 올라가면서 재배치하는 함수(insert와 update_key에 쓰인다.)
+  *  heapify_down(key) : 입력된 key값을 내려가면서 재배치하는 함수(update_key에 쓰인다.)
+  *  find_min : 빈 heap이면 None리턴, 아니면 제일 작은 key값을 리턴
+  *  delete_min : 빈 heap이면 None리턴, 아니면 제일 작은 key값을 리턴 한 후 제거
+  *  update_key(old_key,new_key) : old_key를 new_key로 바꾼후 재배치하는 함수,old_key가 heap안에 없으면 None리턴, 아니면 new_key값이 최종적으로 저장된 index리턴
