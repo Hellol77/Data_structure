@@ -40,6 +40,7 @@ class DoublyLinkedList:
 		b.next=xn
 		a.prev=x
 		x.next=a
+		
 	def moveAfter(self,a,x):
 		self.splice(a,a,x)
 		
@@ -76,11 +77,7 @@ class DoublyLinkedList:
 		key=self.head.prev.key
 		self.deleteNode(self.head.prev)
 		return key
-	def isEmpty(self):
-		if self.head.next==self.head:
-			return True
-		else:
-			return False
+		
 	def search(self,key):#노드 리턴 None 리턴하면 찾는 값이 없다
 		
 		v=self.head.next
@@ -88,15 +85,24 @@ class DoublyLinkedList:
 			if v.key==key:
 				return v
 			v=v.next
-		return None
+		return None	
+		
+	def isEmpty(self):
+		if self.head.next==self.head:
+			return True
+		else:
+			return False
+			
 	def first(self):
 		if self.isEmpty():
 			return None
 		return self.head.next
+		
 	def last(self):
 		if self.isEmpty():
 			return None
 		return self.head.prev
+		
 	def findMax(self): #제일 큰 key리턴 None 리턴하면 empty
 		if self.isEmpty():
 			return None
@@ -109,15 +115,16 @@ class DoublyLinkedList:
 				v=temp.next.key
 				temp=temp.next
 		return v 
+		
 	def deleteMax(self): #제일 큰 key 리턴 None 리턴하면 empty
 		if self.isEmpty():
 			return None
 		v=self.findMax()
 		self.deleteNode(self.search(self.findMax()))
 		return v
+		
 	def sort(self):
 		L_sorted=DoublyLinkedList()
 		while self.findMax()!=None:
 			L_sorted.pushFront(self.deleteMax())
 		return L_sorted
-
