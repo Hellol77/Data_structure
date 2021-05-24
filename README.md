@@ -16,7 +16,7 @@
   * [관련내용](https://hellol77.tistory.com/2)
 ### singlyLinkedList.py
 
-  * 한방향 연결리스트 구현
+* 한방향 연결리스트 구현
   * pushFront(key) : key값을 갖는 노드를 가장 앞에 삽입
   * pushBack(key) : key값을 갖는 노드를 가장 뒤에 삽입
   * popFront : 한방향 연결리스트의 첫 노드를 삭제한 후 그 key값을 리턴
@@ -29,7 +29,7 @@
   * insert(k,key) : head노드 부터 k번째 다음 노드에 key를 가지는 새로운 노드를 삽입 (k는 양수)
   * [관련내용](https://hellol77.tistory.com/3)
 ### doublyLinkedList.py
-  * 양방향 연결리스트 구현
+* 양방향 연결리스트 구현
   * pushFront(key) : key값을 갖는 노드를 가장 앞에 삽입
   * pushBack(key) : key값을 갖는 노드를 가장 뒤에 삽입
   * popFront : 양방향 연결리스트의 첫 노드를 삭제한 후 그 key값을 리턴
@@ -56,7 +56,7 @@
   3. 두번째 출력은 첫번째 출력과 다르게 중복된 횟수만큼 출력되지 않고 중복되면 단 한번만 출력한다.
 
 ### minHeap
-*  최솟값이 root 노드인 트리
+* 최솟값이 root 노드인 트리
   *  insert(key) : 트리안에 key값을 삽입
   *  heapify_up(key) : 입력된 key값을 올라가면서 재배치하는 함수(insert와 update_key에 쓰인다.)
   *  heapify_down(key) : 입력된 key값을 내려가면서 재배치하는 함수(update_key에 쓰인다.)
