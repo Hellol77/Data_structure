@@ -41,7 +41,11 @@
   * sort : 오름차순으로 정렬한 후 양방향 연결리스트를 리턴
   * insertBefore(x,key) : 노드 x 이전에 key값을 가진 노드 삽입
   * insertAfter(x,key) : 노트 x 이후에 key값을 가진 노드 삽입
-  
+* splice(a,b,x) 함수 설명
+  * 노드a 부터 노드b까지를 떼서 노드x뒤에 붙이는 함수이다. 다른 함수에 이용된다.
+  * 조건
+    * 노드a와 b가 동일하거나 a다음b 이어야한다.
+    * head노드와 x는 a와 b사이에 있을 수 없다.  
 ### hashFunction.py
 * key와 value 를 저장하는 해쉬테이블
   *  find_slot(key) : key가 존재할 경우 해당 슬롯 번호를 리턴, 없다면 삽일될 슬롯 번호를 리턴
