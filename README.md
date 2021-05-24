@@ -45,7 +45,8 @@
   * 노드a 부터 노드b까지를 떼서 노드x뒤에 붙이는 함수이다. 다른 함수에 이용된다.
   * 조건
     * 노드a와 b가 동일하거나 a다음b 이어야한다.
-    * head노드와 x는 a와 b사이에 있을 수 없다.  
+    * head노드와 x는 a와 b사이에 있을 수 없다.
+* [관련내용](https://hellol77.tistory.com/4)
 ### hashFunction.py
 * key와 value 를 저장하는 해쉬테이블
   *  find_slot(key) : key가 존재할 경우 해당 슬롯 번호를 리턴, 없다면 삽일될 슬롯 번호를 리턴
