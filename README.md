@@ -82,8 +82,8 @@
   *  insert(key) : key를 삽입하고 그 삽입된 노드를 리턴
   *  deleteByMerging(x) : 노드 x를 제거한다. 노드 x의 왼쪽 subtree와 오른쪽 subtree를 조정하는 방법을 이용,(사용할 때 search를 이용)
   *  deleteByCopying(x) : 노드 x를 제거한다. 노드 x의 왼쪽 subtree에서 가장 큰 값을 가지는 노드를 찾고 그 노드의 key값을 노드 x에 copy하는 방법,(사용할 때 search를 이용)
-  *  succ(x) : 노드 x의 key값보다 바로 다음으로 큰 key를 갖는 노드를 리턴, 없다면 None 리턴,search 함수를 이용
-  *  pred(x) : 노드 x의 key값보다 바로 다음으로 작은 key를 갖는 노드를 리턴,없다면 None 리턴, search 함수를 이용
+  *  succ(x) : 노드 x의 key값보다 바로 다음으로 큰 key를 갖는 노드를 리턴, 없다면 None 리턴,(사용할 때 search를 이용)
+  *  pred(x) : 노드 x의 key값보다 바로 다음으로 작은 key를 갖는 노드를 리턴,없다면 None 리턴,(사용할 때 search를 이용)
   *  rotateRight(x) :  노드 x를 기준으로 오른쪽으로 회전하게 한다.
   *  rotateLeft(x) : 노드 x를 기준으로 왼쪽으로 회전하게 한다.
 
