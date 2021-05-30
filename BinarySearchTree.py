@@ -70,8 +70,7 @@ class BST:
                     p.left = v
                 v.parent = p
                 self.size += 1 
-        self.getHeight(self.root)
-        self.updateHeight(self.root)
+        self.getHeight(v)
         return v
     def deleteByMerging(self, x):
         # assume that x is not None
@@ -87,20 +86,28 @@ class BST:
             while m.right:
                 m = m.right
             m.right = b
-            if b: b.parent = m
+            if b: 
+                b.parent = m
 
         if self.root == x:  # c becomes a new root
-            if c: c.parent = None
+            if c: 
+                c.parent = None
             self.root = c
         else:  # c becomes a child of pt of x
             if pt.left == x:
                 pt.left = c
             else:
                 pt.right = c
-            if c: c.parent = pt
+            if c:
+                c.parent = pt
+        if m !=None:
+            self.getHeight(m)
+        else:
+            self.getHeight(pt)
+            
         self.size -= 1
-        self.getHeight(self.root)
-        self.updateHeight(self.root)
+        
+       
     def deleteByCopying(self, x):
         if x==None:
             return None
@@ -116,6 +123,7 @@ class BST:
                 y.parent.left = y.left
             else:
                 y.parent.right= y.left
+            self.getHeight(y.parent)
             del y
 
         elif not L and R: # R만 있음
@@ -129,8 +137,9 @@ class BST:
                 y.parent.left = y.right
             else:
                 y.parent.right = y.right
+            self.getHeight(y.parent)
             del y
-
+            
         else: # L도 R도 없음
             if pt == None: # x가 루트노드인 경우
                 self.root = None
@@ -139,10 +148,11 @@ class BST:
                     pt.left = None
                 else:
                     pt.right = None
+                self.getHeight(x.parent)
             del x
         self.size-=1
-        self.getHeight(self.root)
-        self.updateHeight(self.root)
+        
+        
     def succ(self,x): #key값의 오름차순 순서에서 x.key값의 다음 노드(successor) 리턴
             #x의 successor가 없다면 (즉,x.key가 최대값이면) none 리턴    
         if x==None:
@@ -215,8 +225,8 @@ class BST:
             b.parent=x
         if x==self.root:
             self.root=z
-        self.getHeight(self.root)
-        self.updateHeight(self.root)
+        self.getHeight(x)
+        
     def rotateRight(self,x):#균형이진탐색트리(height 정보 수정 필요)
         if not x:
             return
@@ -237,23 +247,26 @@ class BST:
             b.parent=x
         if x == self.root:
             self.root=z
-        self.getHeight(self.root)
-        self.updateHeight(self.root)
+        self.getHeight(x)
+        
     def height(self, x): # 노드 x의 height 값을 리턴
         if x == None: return -1
         else: return x.height
-    def getHeight(self,x):
-        if x==None:
-            return -1
-        elif x!=None:
-            x.height=1+max(self.getHeight(x.left),self.getHeight(x.right))
-        return x.height
         
-    def updateHeight(self,v):
-        if v!=None:
-            v.height = self.getHeight(v)
-            self.updateHeight(v.right)
-            self.updateHeight(v.left)
+    def getHeight(self,x):
+        while x:
+            if x.left==None and x.right==None:
+                x.height=0
+            elif x.left==None and x.right!=None:
+                x.height=x.right.height+1
+            elif x.left!=None and x.right==None:
+                x.height=x.left.height+1
+            else:
+                x.height=max(x.right.height,x.left.height)+1
+            x=x.parent
+        return
+        
+    
 	
 T = BST()
 while True:
