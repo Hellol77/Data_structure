@@ -255,16 +255,10 @@ class BST:
         
     def getHeight(self,x):
         while x:
-            if x.left==None and x.right==None:
-                x.height=0
-            elif x.left==None and x.right!=None:
-                x.height=x.right.height+1
-            elif x.left!=None and x.right==None:
-                x.height=x.left.height+1
-            else:
-                x.height=max(x.right.height,x.left.height)+1
-            x=x.parent
+                x.height=max(self.height(x.right),self.height(x.left))+1
+                x=x.parent
         return
+        
         
     
 	
