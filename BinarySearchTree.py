@@ -70,8 +70,9 @@ class BST:
                     p.left = v
                 v.parent = p
                 self.size += 1 
-        self.getHeight(v)
+        self.updateHeight(v)
         return v
+        
     def deleteByMerging(self, x):
         # assume that x is not None
         if x==None:
@@ -88,7 +89,6 @@ class BST:
             m.right = b
             if b: 
                 b.parent = m
-
         if self.root == x:  # c becomes a new root
             if c: 
                 c.parent = None
@@ -101,10 +101,9 @@ class BST:
             if c:
                 c.parent = pt
         if m !=None:
-            self.getHeight(m)
+            self.updateHeight(m)
         else:
-            self.getHeight(pt)
-            
+            self.updateHeight(pt)
         self.size -= 1
         
        
@@ -123,7 +122,7 @@ class BST:
                 y.parent.left = y.left
             else:
                 y.parent.right= y.left
-            self.getHeight(y.parent)
+            self.updateHeight(y.parent)
             del y
 
         elif not L and R: # R만 있음
@@ -137,7 +136,7 @@ class BST:
                 y.parent.left = y.right
             else:
                 y.parent.right = y.right
-            self.getHeight(y.parent)
+            self.updateHeight(y.parent)
             del y
             
         else: # L도 R도 없음
@@ -148,10 +147,9 @@ class BST:
                     pt.left = None
                 else:
                     pt.right = None
-                self.getHeight(x.parent)
+                self.updateHeight(x.parent)
             del x
         self.size-=1
-        
         
     def succ(self,x): #key값의 오름차순 순서에서 x.key값의 다음 노드(successor) 리턴
             #x의 successor가 없다면 (즉,x.key가 최대값이면) none 리턴    
@@ -177,7 +175,6 @@ class BST:
                         return None
                 return a.parent
            
-
     def pred(self,x):#key값의 오름차순 순서에서 x.key값의 다음 노드(predecssor) 리턴
             #x의 predecssor가 없다면 (즉,x.key가 최소값이면) none 리턴
         if x==None:
@@ -205,6 +202,7 @@ class BST:
                     if self.root==a:
                         return None
                 return a.parent
+                
     def rotateLeft(self,x):#균형이진탐색트리(height 정보 수정 필요)
         if not x:
             return
@@ -225,7 +223,7 @@ class BST:
             b.parent=x
         if x==self.root:
             self.root=z
-        self.getHeight(x)
+        self.updateHeight(x)
         
     def rotateRight(self,x):#균형이진탐색트리(height 정보 수정 필요)
         if not x:
@@ -247,13 +245,13 @@ class BST:
             b.parent=x
         if x == self.root:
             self.root=z
-        self.getHeight(x)
+        self.updateHeight(x)
         
     def height(self, x): # 노드 x의 height 값을 리턴
         if x == None: return -1
         else: return x.height
         
-    def getHeight(self,x):
+    def updateHeight(self,x):
         while x:
                 x.height=max(self.height(x.right),self.height(x.left))+1
                 x=x.parent
