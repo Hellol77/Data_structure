@@ -86,6 +86,6 @@
   *  pred(x) : 노드 x의 key값보다 바로 다음으로 작은 key를 갖는 노드를 리턴,없다면 None 리턴,(사용할 때 search를 이용)
   *  rotateRight(x) :  노드 x를 기준으로 오른쪽으로 회전하게 한다.
   *  rotateLeft(x) : 노드 x를 기준으로 왼쪽으로 회전하게 한다.
-
+  *  updateHeight(x) : 노드 x부터 root노드까지 높이를 update
 
 ### AVL
