@@ -89,3 +89,10 @@
   *  updateHeight(x) : 노드 x부터 root노드까지 높이를 update
 
 ### AVL
+*  모든 노드가 왼쪽 노드와 오른쪽 노드의 높이 차이가 1이하인 BinarySearchTree
+*  BinarySearchTree와 달라진 점
+   *  deleteByCopying(x) :  노드 x를 제거한다. 노드 x의 왼쪽 subtree에서 가장 큰 값을 가지는 노드를 찾고 그 노드의 key값을 노드 x에 copy하는 방법, 노드를 삭제하고 삭제된 노드의 부모노드를 리턴(사용할 때 search를 이용)
+   *  rebalance(x,y,z) : 높이차이를 맞춰주는 함수,rotateRight와 rotateLeft를 사용해서 높이의 차이를 맞춘다음 x,y,z중 제일 높이 있는 노드를 리턴
+   *  insert(key) : rebalance함수를 사용하여 높이 차이를 1이하로 맞추면서 노드를 삽입한다.
+   *  delete(x) : rebalance함수를 사용하여 높이 차이를 1이하로 맞추면서 노드를 삭제한다. 삭제에는 deleteByCopying을 사용한다
+    
