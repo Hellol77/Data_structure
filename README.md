@@ -95,4 +95,3 @@
    *  rebalance(x,y,z) : 높이차이를 맞춰주는 함수,rotateRight와 rotateLeft를 사용해서 높이의 차이를 맞춘다음 x,y,z중 제일 높이 있는 노드를 리턴
    *  insert(key) : rebalance함수를 사용하여 높이 차이를 1이하로 맞추면서 노드를 삽입한다.
    *  delete(x) : rebalance함수를 사용하여 높이 차이를 1이하로 맞추면서 노드를 삭제한다. 삭제에는 deleteByCopying을 사용한다
-    
